@@ -1,19 +1,31 @@
 {
   "name": "handful-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Handful-generator for codes",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "inquirer": "^7.1.0"
   },
   "bin": {
     "handful-generator": "index.js"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breno12321/Handful-generator.git"
+  },
+  "keywords": [
+    "cli",
+    "code",
+    "generator"
+  ],
+  "author": "breno12321",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/breno12321/Handful-generator/issues"
+  },
+  "homepage": "https://github.com/breno12321/Handful-generator#readme"
 }
