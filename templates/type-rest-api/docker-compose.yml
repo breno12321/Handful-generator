@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  expressAPI:
+    app:
+      build: .
+      environment:
+        - env_var_name=${VARIABLE_NAME}
