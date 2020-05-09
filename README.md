@@ -35,3 +35,7 @@ The TS Express API provides a simple API base for Restfull services using Typesc
 * [X] Build bundles (for js files)
 
 The compiler used is `tsc` along side the `tsconfig.json` file
+
+## Usage 👩‍💻👨‍💻
+![](./assets/gifs/wjqCxyTJn0.gif)
+Just a simple `npx hanful-generator` then select the option you desire and the folder name and you're done!!🎉🎉🎉
