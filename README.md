@@ -38,4 +38,5 @@ The compiler used is `tsc` along side the `tsconfig.json` file
 
 ## Usage 👩‍💻👨‍💻
 ![](./assets/gifs/wjqCxyTJn0.gif)
+
 Just a simple `npx hanful-generator` then select the option you desire and the folder name and you're done!!🎉🎉🎉
