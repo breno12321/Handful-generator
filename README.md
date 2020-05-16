@@ -36,6 +36,20 @@ The TS Express API provides a simple API base for Restfull services using Typesc
 
 The compiler used is `tsc` along side the `tsconfig.json` file
 
+### TypeScript Express API
+
+The TS Express API provides a simple API base for Restfull services using Typescript along side TypeORM framework and core User and Authentication (jwt based) methods. This template has:
+
+* [X] Jest config files
+* [X] ORM ( TypeORM )
+* [X] eslint
+* [X] dockerfiles
+* [ ] Kube files
+* [X] Build bundles (for js files)
+
+The compiler used is `tsc` along side the `tsconfig.json` file  
+For mor information check the readme inside the project 😉
+
 ## Usage 👩‍💻👨‍💻
 ![](./assets/gifs/wjqCxyTJn0.gif)
 
