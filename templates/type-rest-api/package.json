@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "nodemon",
     "build": "rimraf ./build && tsc",
-    "start": "npm run build && node build/index.js",
+    "start": "npm run build && node build/server.js",
     "test": "jest",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
