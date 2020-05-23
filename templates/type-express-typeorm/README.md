@@ -1,10 +1,11 @@
 # TypeScript Express API Base
-![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)
-![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)
-![Types](https://badgen.net/npm/types/tslib)
-![buildShield](https://img.shields.io/github/workflow/status/breno12321/type-express-typeorm/Node.js%20CI)
-![commitActivity](https://badgen.net/github/last-commit/breno12321/type-express-typeorm)
-![licence](https://img.shields.io/github/license/breno12321/type-express-typeorm)
+[![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
+[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://www.docker.com/)
+![Types](https://badgen.net/badge/icon/typescript?icon=typescript&label)
+[![buildShield](https://img.shields.io/github/workflow/status/breno12321/type-express-typeorm/Node.js%20CI)](https://github.com/breno12321/type-express-typeorm)
+[![commitActivity](https://badgen.net/github/last-commit/breno12321/type-express-typeorm)](https://github.com/breno12321/type-express-typeorm)
+[![licence](https://img.shields.io/github/license/breno12321/type-express-typeorm)](https://github.com/breno12321/type-express-typeorm)
+[![handfull](https://badgen.net/badge/PartOf/Handful-generator/pink?icon=npm)](https://www.npmjs.com/package/handful-generator)
 ## Install
 `npm i`
 
