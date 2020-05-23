@@ -13,22 +13,13 @@ export const createToken = (jwtPayload: JWTInterface): string => {
 
 export const revokeToken = async (tokenToRevoke: string): Promise<void> => {
   const tokenRepository = await getRepository(Tokens);
-  let token;
-  try {
-    token = await tokenRepository.findOneOrFail({
-      where: [
-        { value: tokenToRevoke },
-      ],
-    });
-  } catch (error) {
-    throw new Error('Cannot Find Token');
-  }
+  const token = new Tokens();
   token.revoked = true;
-
+  token.value = tokenToRevoke;
   try {
     await tokenRepository.save(token);
   } catch (error) {
-    throw new Error('Could Not Revoke Token');
+    throw new Error('Cannot Revoke Token');
   }
 };
 export const verifyToken = (token: string): string | object => jwt.verify(token, config.jwtSecret);

@@ -9,11 +9,11 @@ class UserController {
     // Get users from database
     const userRepository = getRepository(User);
     const users = await userRepository.find({
-      select: ['id', 'username', 'role'], // We dont want to send the passwords on response
+      select: ['id', 'username', 'role', 'email'], // We dont want to send the passwords on response
     });
 
     // Send the users object
-    res.send(users);
+    res.status(200).send(users);
   };
 
   static getOneById = async (req: Request, res: Response): Promise<void> => {

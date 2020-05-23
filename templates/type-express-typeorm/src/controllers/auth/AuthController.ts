@@ -32,17 +32,9 @@ export default class AuthController {
     // Sing JWT, valid for 1 hour
     const token = createToken({ userId: user.id, username: user.username, email: user.email });
 
-    user.token = token;
-    userRepository.save(user);
-    const tokenRepository = getRepository(Tokens);
-    try {
-      await tokenRepository.save({ revoked: false, value: token });
-      // Send the jwt in the response
-      res.set('x-api-token', token);
-      res.status(200).send({ token });
-    } catch (error) {
-      res.status(500).send({ error: 'Fail to generate user token try login again' });
-    }
+    // Send the jwt in the response
+    res.set('x-api-token', token);
+    res.status(200).send({ token });
   };
 
   static changePassword = async (req: Request, res: Response): Promise<void> => {
