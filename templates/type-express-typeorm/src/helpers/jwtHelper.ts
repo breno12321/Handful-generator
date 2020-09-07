@@ -22,4 +22,4 @@ export const revokeToken = async (tokenToRevoke: string): Promise<void> => {
     throw new Error('Cannot Revoke Token');
   }
 };
-export const verifyToken = (token: string): string | object => jwt.verify(token, config.jwtSecret);
+export const verifyToken = (token: string): string | unknown => jwt.verify(token, config.jwtSecret);

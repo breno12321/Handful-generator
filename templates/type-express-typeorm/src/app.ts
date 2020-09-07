@@ -4,12 +4,12 @@ import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
 
+import * as dotenv from 'dotenv';
 import userRoute from './routes/userRouter';
 import authRoute from './routes/authRouter';
 import { apiLimit, authLimit } from './middleware/rateLimit';
 
-
-require('dotenv').config();
+dotenv.config();
 // const jwt = require('jsonwebtoken');
 
 const app = express();
@@ -24,7 +24,6 @@ app.use(helmet());
 app.disable('x-powered-by');
 
 app.use(morgan('[:date[clf]] From :remote-addr ":method :url HTTP/:http-version" :status Content-Length :res[content-length]'));
-
 
 app.use(
   urlencoded({

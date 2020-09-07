@@ -33,7 +33,7 @@ export default class AuthController {
     const token = createToken({ userId: user.id, username: user.username, email: user.email });
 
     // Send the jwt in the response
-    res.set('x-api-token', token);
+    res.set('x-api-key', token);
     res.status(200).send({ token });
   };
 

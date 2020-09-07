@@ -4,7 +4,6 @@ import app from '../../app';
 
 const request = supertest(app);
 
-
 describe('Authentication test suit', (): void => {
   let token: string;
   let connection: Connection;

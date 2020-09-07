@@ -1,9 +1,8 @@
-
 import { Request, Response, NextFunction } from 'express';
 import { getRepository } from 'typeorm';
 import JWTInterface from '../interfaces/JWTInterface';
 import { errorMessage } from '../helpers/consoleSyle';
-import { createToken, verifyToken } from '../helpers/jwtHelper';
+import { verifyToken } from '../helpers/jwtHelper';
 import Tokens from '../models/Tokens';
 
 export default async (req: Request, res: Response, next: NextFunction): Promise<void> => {
@@ -26,10 +25,6 @@ export default async (req: Request, res: Response, next: NextFunction): Promise<
     res.status(401).send({ error: 'this token is revoked' });
   } catch (error) {
     // The token is valid for 1 hour
-    // We want to send a new token on every request
-    const { userId, username, email } = jwtPayload;
-    const newToken = createToken({ userId, username, email });
-    res.setHeader('x-api-token', newToken);
     next();
   }
 };
