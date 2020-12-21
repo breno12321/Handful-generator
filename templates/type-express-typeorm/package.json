@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsnd --respawn --transpile-only src/server.ts",
     "build": "rimraf ./build && tsc",
-    "start": "ts-node src/index.ts",
+    "start": "ts-node --files src/index.ts",
     "test": "jest",
     "db:migrate": "ts-node ./node_modules/typeorm/cli.js migration:run",
     "db:sync": "ts-node ./node_modules/typeorm/cli.js schema:sync",
