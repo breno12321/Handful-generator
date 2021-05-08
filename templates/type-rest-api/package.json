@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon",
+    "dev": "cross-env DEBUG=API:* tsnd --transpile-only --rs --respawn --inspect --ignore-watch node_modules src/server.ts",
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/server.js",
-    "test": "jest",
+    "test": "npm run pretest; cross-env NODE_ENV=DEV jest --detectOpenHandles --colors --coverage",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags && rm -rf build/temp"
